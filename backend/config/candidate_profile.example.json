@@ -1,0 +1,81 @@
+{
+  "name": "Alex Dev",
+  "title": "Junior Python Backend Developer | Ciberseguridad & APIs",
+  "portfolio_url": "https://alexdev.example.com",
+  "github_url": "https://github.com/alexdev",
+  "experience_years": 0,
+  "accepts_junior_up_to_years": 2,
+  "residence": {
+    "country": "España",
+    "autonomous_community": "Principado de Asturias",
+    "allowed_onsite_hybrid_keywords": [
+      "asturias",
+      "oviedo",
+      "gijón",
+      "gijon",
+      "avilés",
+      "aviles",
+      "llanera",
+      "parque tecnológico de asturias",
+      "siero",
+      "mieres"
+    ],
+    "strict_onsite_local_only": true,
+    "allow_remote_spain": true,
+    "allow_remote_latam": true,
+    "allow_remote_global": true
+  },
+  "languages": {
+    "spanish": "Nativo",
+    "english": "A2 (Básico - comunicación en español, lectura técnica con herramientas)"
+  },
+  "skills": {
+    "primary": [
+      "Python",
+      "FastAPI",
+      "Cybersecurity",
+      "PostgreSQL",
+      "Pytest",
+      "Docker",
+      "REST API"
+    ],
+    "secondary": [
+      "Flask",
+      "Streamlit",
+      "Pandas",
+      "Git",
+      "Linux"
+    ],
+    "explicitly_avoid_or_unskilled": [
+      "React",
+      "Angular",
+      "Vue.js"
+    ]
+  },
+  "target_roles": [
+    "Junior Python Developer",
+    "Backend Developer Junior (FastAPI / Python)",
+    "QA Tester Junior"
+  ],
+  "projects": [
+    {
+      "name": "Gatekeeper",
+      "stack": ["Python", "FastAPI", "Starlette", "ASGI", "PyPI", "Cybersecurity", "pytest"],
+      "description": "Middleware ASGI de seguridad y WAF publicado en PyPI para FastAPI y Starlette (+2.700 tests con pytest).",
+      "best_for": ["Backend", "Python", "FastAPI", "Ciberseguridad", "QA Testing"]
+    },
+    {
+      "name": "StoreAPI",
+      "stack": ["Python", "FastAPI", "PostgreSQL", "SQLAlchemy"],
+      "description": "API REST e-commerce con autenticación JWT, pasarela de pago y base de datos relacional.",
+      "best_for": ["Backend", "Python", "PostgreSQL", "REST API", "SQL"]
+    }
+  ],
+  "matching_weights": {
+    "tech_stack": 35,
+    "experience_level": 25,
+    "role_fit": 15,
+    "location_modality": 15,
+    "language_fit": 10
+  }
+}

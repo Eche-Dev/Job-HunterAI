@@ -1,0 +1,345 @@
+{
+  "version": "2.1",
+  "last_price_check": "2026-11-09T00:25:00Z",
+  "cost_control": {
+    "enabled": true,
+    "max_search_budget_usd": 2.0,
+    "prefer_cheapest_apify_or_official_api": true,
+    "currency": "USD"
+  },
+  "source_tools": {
+    "linkedin_jobs": {
+      "display_name": "LinkedIn Jobs (Principado de Asturias, España Remoto y LATAM Remoto)",
+      "region": "ES_ASTURIAS_LATAM",
+      "enabled": true,
+      "candidates": [
+        {
+          "tool_id": "linkedin_live_guest_plus_apify",
+          "name": "Híbrido: LinkedIn Guest Search API + Apify Cheerio Actor",
+          "provider": "apify_hybrid",
+          "actor_id": "apify/cheerio-scraper",
+          "pricing_model": "pay_per_compute_unit",
+          "cost_per_run_usd": 0.0015,
+          "cost_per_100_results_usd": 0.0030,
+          "reliability_score": 98,
+          "requires_token": true,
+          "notes": "Extrae en tiempo real ofertas de LinkedIn en Asturias (Oviedo, Gijón, Avilés), España 100% Remoto y LATAM 100% Remoto al menor coste por unidad de cómputo."
+        },
+        {
+          "tool_id": "apify_bebity_linkedin",
+          "name": "Apify Actor: bebity/linkedin-jobs-scraper",
+          "provider": "apify",
+          "actor_id": "bebity/linkedin-jobs-scraper",
+          "pricing_model": "pay_per_compute_unit",
+          "cost_per_run_usd": 0.0085,
+          "cost_per_100_results_usd": 0.0150,
+          "reliability_score": 95,
+          "requires_token": true,
+          "notes": "Actor dedicado para LinkedIn Jobs."
+        },
+        {
+          "tool_id": "apify_curious_coder_linkedin",
+          "name": "Apify Actor: curious_coder/linkedin-jobs-scraper",
+          "provider": "apify",
+          "actor_id": "curious_coder/linkedin-jobs-scraper",
+          "pricing_model": "pay_per_result",
+          "cost_per_run_usd": 0.0250,
+          "cost_per_100_results_usd": 0.1000,
+          "reliability_score": 96,
+          "requires_token": true,
+          "notes": "Pago por resultado individual."
+        },
+        {
+          "tool_id": "apify_browser_linkedin",
+          "name": "Apify Actor: apify/puppeteer-scraper (Headless Chrome)",
+          "provider": "apify",
+          "actor_id": "apify/puppeteer-scraper",
+          "pricing_model": "pay_per_compute_unit",
+          "cost_per_run_usd": 0.0650,
+          "cost_per_100_results_usd": 0.1800,
+          "reliability_score": 90,
+          "requires_token": true,
+          "notes": "Consume mucha RAM al levantar navegador Chromium."
+        },
+        {
+          "tool_id": "serpapi_google_jobs_linkedin",
+          "name": "SerpApi Google Jobs Aggregator",
+          "provider": "external_api",
+          "pricing_model": "monthly_credits",
+          "cost_per_run_usd": 0.0500,
+          "cost_per_100_results_usd": 0.1200,
+          "reliability_score": 94,
+          "requires_token": true,
+          "notes": "Suscripción mensual externa ($50/mes)."
+        }
+      ]
+    },
+    "linkedin_posts": {
+      "display_name": "LinkedIn Posts / Feed de Recruiters & Vacantes Directas (ES y LATAM)",
+      "region": "ES_LATAM_REMOTE",
+      "enabled": true,
+      "candidates": [
+        {
+          "tool_id": "apify_cheerio_linkedin_posts",
+          "name": "Apify Actor: apify/cheerio-scraper (Búsqueda Booleana de Vacantes)",
+          "provider": "apify_hybrid",
+          "actor_id": "apify/cheerio-scraper",
+          "pricing_model": "pay_per_compute_unit",
+          "cost_per_run_usd": 0.0020,
+          "cost_per_100_results_usd": 0.0040,
+          "reliability_score": 96,
+          "requires_token": true,
+          "notes": "Opción más barata en Apify (HTTP puro sin navegador) para capturar publicaciones y vacantes recién abiertas."
+        },
+        {
+          "tool_id": "apify_linkedin_post_search",
+          "name": "Apify Actor: apimaestro/linkedin-posts-search-scraper",
+          "provider": "apify",
+          "actor_id": "apimaestro/linkedin-posts-search-scraper-no-cookies",
+          "pricing_model": "pay_per_compute_unit",
+          "cost_per_run_usd": 0.0140,
+          "cost_per_100_results_usd": 0.0320,
+          "reliability_score": 95,
+          "requires_token": true,
+          "notes": "Scraper específico de posts sin cookies."
+        },
+        {
+          "tool_id": "apify_google_search_dork",
+          "name": "Apify Actor: apify/google-search-scraper (site:linkedin.com/posts)",
+          "provider": "apify",
+          "actor_id": "apify/google-search-scraper",
+          "pricing_model": "pay_per_compute_unit",
+          "cost_per_run_usd": 0.0180,
+          "cost_per_100_results_usd": 0.0450,
+          "reliability_score": 92,
+          "requires_token": true,
+          "notes": "Indexación por SERP de Google."
+        },
+        {
+          "tool_id": "apify_curious_linkedin_post",
+          "name": "Apify Actor: curious_coder/linkedin-post-search-scraper",
+          "provider": "apify",
+          "actor_id": "curious_coder/linkedin-post-search-scraper",
+          "pricing_model": "pay_per_result",
+          "cost_per_run_usd": 0.0280,
+          "cost_per_100_results_usd": 0.0850,
+          "reliability_score": 93,
+          "requires_token": true,
+          "notes": "Cobro por resultado extraído."
+        },
+        {
+          "tool_id": "apify_playwright_feed",
+          "name": "Apify Actor: apify/playwright-scraper (LinkedIn Feed Browser)",
+          "provider": "apify",
+          "actor_id": "apify/playwright-scraper",
+          "pricing_model": "pay_per_compute_unit",
+          "cost_per_run_usd": 0.0850,
+          "cost_per_100_results_usd": 0.2200,
+          "reliability_score": 88,
+          "requires_token": true,
+          "notes": "Opción más costosa con navegador completo."
+        }
+      ]
+    },
+    "spain_asturias_portals": {
+      "display_name": "España y Principado de Asturias (Tecnoempleo, InfoJobs, Empleo Asturias, Joppy)",
+      "region": "ES_ASTURIAS",
+      "enabled": true,
+      "candidates": [
+        {
+          "tool_id": "apify_cheerio_spain_asturias",
+          "name": "Apify Actor: apify/cheerio-scraper (Tecnoempleo + Asturias + España Remoto)",
+          "provider": "apify_hybrid",
+          "actor_id": "apify/cheerio-scraper",
+          "pricing_model": "pay_per_compute_unit",
+          "cost_per_run_usd": 0.0025,
+          "cost_per_100_results_usd": 0.0050,
+          "reliability_score": 97,
+          "requires_token": true,
+          "notes": "Extracción HTTP ultrarrápida con Apify Cheerio + conectores directos de España y Principado de Asturias."
+        },
+        {
+          "tool_id": "apify_indeed_spain",
+          "name": "Apify Actor: misceres/indeed-scraper (España & Asturias)",
+          "provider": "apify",
+          "actor_id": "misceres/indeed-scraper",
+          "pricing_model": "pay_per_result",
+          "cost_per_run_usd": 0.0150,
+          "cost_per_100_results_usd": 0.0500,
+          "reliability_score": 94,
+          "requires_token": true,
+          "notes": "Scraper por resultado para Indeed España."
+        },
+        {
+          "tool_id": "apify_web_scraper_infojobs",
+          "name": "Apify Actor: apify/web-scraper (InfoJobs & Joppy)",
+          "provider": "apify",
+          "actor_id": "apify/web-scraper",
+          "pricing_model": "pay_per_compute_unit",
+          "cost_per_run_usd": 0.0350,
+          "cost_per_100_results_usd": 0.0900,
+          "reliability_score": 91,
+          "requires_token": true,
+          "notes": "Usa navegador para portales con renderizado JS."
+        },
+        {
+          "tool_id": "apify_puppeteer_spain",
+          "name": "Apify Actor: apify/puppeteer-scraper (Portales España)",
+          "provider": "apify",
+          "actor_id": "apify/puppeteer-scraper",
+          "pricing_model": "pay_per_compute_unit",
+          "cost_per_run_usd": 0.0600,
+          "cost_per_100_results_usd": 0.1600,
+          "reliability_score": 92,
+          "requires_token": true,
+          "notes": "Alto consumo de memoria."
+        },
+        {
+          "tool_id": "proxy_residential_spain",
+          "name": "Apify Playwright + Proxies Residenciales España",
+          "provider": "apify",
+          "actor_id": "apify/playwright-scraper",
+          "pricing_model": "pay_per_compute_unit_plus_proxy",
+          "cost_per_run_usd": 0.1200,
+          "cost_per_100_results_usd": 0.3000,
+          "reliability_score": 96,
+          "requires_token": true,
+          "notes": "Opción más cara; descartada por el optimizador de costes."
+        }
+      ]
+    },
+    "latam_remote": {
+      "display_name": "Latinoamérica Remoto en Vivo (Get on Board API Oficial + Portales LATAM)",
+      "region": "LATAM_REMOTE",
+      "enabled": true,
+      "candidates": [
+        {
+          "tool_id": "getonboard_official_live_api",
+          "name": "API Oficial Get on Board LATAM + Apify Cheerio Fallback",
+          "provider": "apify_hybrid",
+          "actor_id": "apify/cheerio-scraper",
+          "pricing_model": "official_api_plus_apify_micro",
+          "cost_per_run_usd": 0.0010,
+          "cost_per_100_results_usd": 0.0020,
+          "reliability_score": 99,
+          "requires_token": false,
+          "notes": "Extrae en vivo desde la API JSON oficial de Get on Board (empleos IT en Latinoamérica) con coste mínimo."
+        },
+        {
+          "tool_id": "apify_cheerio_getonboard",
+          "name": "Apify Actor: apify/cheerio-scraper (Computrabajo & Get on Board)",
+          "provider": "apify",
+          "actor_id": "apify/cheerio-scraper",
+          "pricing_model": "pay_per_compute_unit",
+          "cost_per_run_usd": 0.0065,
+          "cost_per_100_results_usd": 0.0120,
+          "reliability_score": 95,
+          "requires_token": true,
+          "notes": "Extracción HTTP ligera en portales LATAM."
+        },
+        {
+          "tool_id": "apify_indeed_latam",
+          "name": "Apify Actor: misceres/indeed-scraper (MX/CO/AR/CL Remoto)",
+          "provider": "apify",
+          "actor_id": "misceres/indeed-scraper",
+          "pricing_model": "pay_per_result",
+          "cost_per_run_usd": 0.0200,
+          "cost_per_100_results_usd": 0.0600,
+          "reliability_score": 93,
+          "requires_token": true,
+          "notes": "Búsqueda multicountry en Latinoamérica."
+        },
+        {
+          "tool_id": "apify_web_scraper_latam",
+          "name": "Apify Actor: apify/web-scraper (Empleos IT LATAM)",
+          "provider": "apify",
+          "actor_id": "apify/web-scraper",
+          "pricing_model": "pay_per_compute_unit",
+          "cost_per_run_usd": 0.0380,
+          "cost_per_100_results_usd": 0.0950,
+          "reliability_score": 90,
+          "requires_token": true,
+          "notes": "Scraper con navegador."
+        },
+        {
+          "tool_id": "apify_browser_bumeran",
+          "name": "Apify Actor: apify/playwright-scraper (Bumeran / ZonaJobs LATAM)",
+          "provider": "apify",
+          "actor_id": "apify/playwright-scraper",
+          "pricing_model": "pay_per_compute_unit",
+          "cost_per_run_usd": 0.0550,
+          "cost_per_100_results_usd": 0.1500,
+          "reliability_score": 89,
+          "requires_token": true,
+          "notes": "Navegador headless completo."
+        }
+      ]
+    },
+    "global_remote_apis": {
+      "display_name": "Portales Remotos Internacionales y Europeos (Remotive, Himalayas, Arbeitnow, RemoteOK)",
+      "region": "GLOBAL_EUROPE_REMOTE",
+      "enabled": true,
+      "candidates": [
+        {
+          "tool_id": "official_json_apis_live_bundle",
+          "name": "APIs JSON Oficiales en Tiempo Real (Remotive + Himalayas + Arbeitnow + RemoteOK)",
+          "provider": "direct_http",
+          "pricing_model": "free_official_api",
+          "cost_per_run_usd": 0.0005,
+          "cost_per_100_results_usd": 0.0010,
+          "reliability_score": 99,
+          "requires_token": false,
+          "notes": "Consulta en vivo los 4 endpoints JSON públicos oficiales de empleo remoto internacional y europeo."
+        },
+        {
+          "tool_id": "apify_cheerio_remote",
+          "name": "Apify Actor: apify/cheerio-scraper (We Work Remotely & Remote Boards)",
+          "provider": "apify",
+          "actor_id": "apify/cheerio-scraper",
+          "pricing_model": "pay_per_compute_unit",
+          "cost_per_run_usd": 0.0055,
+          "cost_per_100_results_usd": 0.0110,
+          "reliability_score": 95,
+          "requires_token": true,
+          "notes": "Scraping HTTP en Apify."
+        },
+        {
+          "tool_id": "apify_wellfound_scraper",
+          "name": "Apify Actor: Wellfound Startups Scraper",
+          "provider": "apify",
+          "actor_id": "apify/web-scraper",
+          "pricing_model": "pay_per_compute_unit",
+          "cost_per_run_usd": 0.0300,
+          "cost_per_100_results_usd": 0.0800,
+          "reliability_score": 90,
+          "requires_token": true,
+          "notes": "Extracción en startups de Wellfound."
+        },
+        {
+          "tool_id": "apify_eures_scraper",
+          "name": "Apify Actor: EURES Portal Europeo Scraper",
+          "provider": "apify",
+          "actor_id": "apify/playwright-scraper",
+          "pricing_model": "pay_per_compute_unit",
+          "cost_per_run_usd": 0.0450,
+          "cost_per_100_results_usd": 0.1100,
+          "reliability_score": 91,
+          "requires_token": true,
+          "notes": "Extracción con Playwright del portal europeo EURES."
+        },
+        {
+          "tool_id": "apify_puppeteer_global",
+          "name": "Apify Actor: apify/puppeteer-scraper (Global Job Boards)",
+          "provider": "apify",
+          "actor_id": "apify/puppeteer-scraper",
+          "pricing_model": "pay_per_compute_unit",
+          "cost_per_run_usd": 0.0700,
+          "cost_per_100_results_usd": 0.1900,
+          "reliability_score": 89,
+          "requires_token": true,
+          "notes": "Navegador completo."
+        }
+      ]
+    }
+  }
+}

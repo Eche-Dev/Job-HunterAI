@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: jobhunter-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=${DATABASE_URL:-sqlite:///./data/jobhunter.db}
+      - ADMIN_USERNAME=${ADMIN_USERNAME:-admin}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-AdminSeguro2026!}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY:-cambiar-jwt-secret-key-super-seguro-en-produccion}
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-http://localhost:3000,http://127.0.0.1:3000}
+      - APIFY_API_TOKEN=${APIFY_API_TOKEN:-}
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - AI_MODEL=${AI_MODEL:-gemini-2.0-flash}
+    volumes:
+      - ./backend/data:/app/data
+      - ./backend/config:/app/config
+    restart: unless-stopped

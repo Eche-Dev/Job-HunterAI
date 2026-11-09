@@ -1,0 +1,106 @@
+# =====================================================================
+# Job Hunter AI + Gatekeeper WAF (.gitignore)
+# Protección Integral de Secretos, Entornos y Datos Privados
+# =====================================================================
+
+# 1. Environment Variables & Secrets (CRÍTICO: Nunca comitear credenciales)
+.env
+.env.*
+!.env.example
+*.env
+backend/.env*
+!backend/.env.example
+frontend/.env*
+!frontend/.env.example
+*.pem
+*.key
+*.crt
+*.pfx
+*.p12
+secrets.json
+credentials.json
+token.json
+service_account*.json
+
+# 2. Vercel & Railway Deployment Caches
+.vercel/
+.vercel
+railway.json.local
+
+# 3. Python, Virtual Environments & Backend
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+.installed.cfg
+*.egg
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+
+# 4. Bases de Datos Locales & Almacenamiento Privado
+*.db
+*.sqlite
+*.sqlite3
+backend/data/*.db
+backend/data/*.sqlite
+backend/data/*.sqlite3
+backend/data/runs/*
+!backend/data/runs/.gitkeep
+
+# 5. Node, Next.js & Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+frontend/.next/
+frontend/out/
+frontend/build/
+.next/
+out/
+dist/
+*.tsbuildinfo
+.npm
+
+# 6. Logs & Archivos Temporales
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+# 7. IDE, Editores & Sistema Operativo
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+.qodo/
+Botwork.pdf
